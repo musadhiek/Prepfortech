@@ -1,0 +1,16 @@
+   if(idx==2*n)
+    return;
+    
+    }
+    
+    if(open<n)
+    s+="(";
+   count(n,open+1,close,ans);
+   s.pop();
+    
+    if(open>close) 
+    s+=")"
+    count(n,open,close+1,,ans);
+    s.pop();
+    
+} 

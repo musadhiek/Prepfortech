@@ -1,0 +1,35 @@
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int n=matrix.size();
+        
+        for(int i=0;i<n;i++)
+            for(int j=0;j<i;j++)
+                swap(matrix[i][j],matrix[j][i]);
+        
+         for(int i=0;i<n;i++)
+             reverse(matrix[i].begin(),matrix[i].end());
+            
+        
+    }
+};
+
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+     
+        
+        
+        n =len(matrix)
+        for i in range(n):
+            for j in range(n):
+                if i<j:
+                    matrix[i][j],matrix[j][i]=matrix[j][i],matrix[i][j]
+        for l in matrix:
+            l.reverse()
+                    
+                    
+                    
+        

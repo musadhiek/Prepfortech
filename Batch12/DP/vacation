@@ -1,0 +1,41 @@
+if i m starting activities--- all 3 activities
+0-a
+1-b
+2-c
+3-start
+
+solve(0,3)
+
+ll solve(int idx,int prev)
+{
+    if(idx==n)
+    return 0;
+    if(dp[idx][prev]!=-1)
+    return dp[idx][prev];
+    
+    if(prev==0)
+    {
+        ans=max(ans,b[idx]+solve(idx+1,1));
+        ans=max(ans,c[idx]+solve(idx+1,2));
+        
+    }
+      if(prev==1)
+    {
+        ans=max(ans,a[idx]+solve(idx+1,0));
+        ans=max(ans,c[idx]+solve(idx+1,2));
+        
+    }
+     if(prev==2)
+    {
+        ans=max(ans,a[idx]+solve(idx+1,0));
+        ans=max(ans,b[idx]+solve(idx+1,1));
+        
+    }
+    else
+    {
+         ans=max(ans,a[idx]+solve(idx+1,0));
+        ans=max(ans,b[idx]+solve(idx+1,1));
+         ans=max(ans,c[idx]+solve(idx+1,2));
+    }
+    
+}

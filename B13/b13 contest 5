@@ -1,0 +1,94 @@
+https://leetcode.com/contest/weekly-contest-294/
+
+def ArrayChallenge(arr):  k , new_arr = arr[0], arr[1:]
+  i = 0
+  ans = []
+  for j in range(len(new_arr)):
+    if j -i + 1 >k:
+      i+=1
+    
+    window = new_arr[i: j+1]
+    window.sort()
+    if len(window) % 2 == 0:
+      median = int((window[len(window)//2] + window[(len(window)//2) - 1])/2)
+    else:
+      median = window[len(window)//2]
+    ans.append(median)
+
+
+  # code goes here
+  return ",".join([str(i) for i in ans])
+
+# keep this function call here 
+print(ArrayChallenge(input()))
+
+using System;using System.Collections.Generic;
+
+class MainClass {
+
+  public static string ArrayChallenge(int[] arr) {
+
+    // code goes here  
+    int k =arr[0];
+    int n = arr.Length-1;
+    int i=1;
+    int j=1;
+    var list = new List<string>(){};
+     
+    while(j<=n)
+    {
+       if(j-i+1<k)
+       {
+         int size = j-i+1;
+         int [] arrayy = new int[size];
+         Array.Copy(arr,i,arrayy,0,size);
+        list.Add(CalcMedian(arrayy));
+
+         j++;
+       }
+
+      if(j-i+1==k)
+      {
+        int size =j-i+1;
+        int[] p = new int[size];
+        Array.Copy(arr,i,p,0,size);
+        list.Add(CalcMedian(p));
+        i++;
+        j++;
+
+
+      }
+
+
+
+    }
+
+
+    return String.Join(',',list);
+
+  }
+
+  public static string CalcMedian(int[] a)
+  {
+    int l = a.Length;
+    Array.Sort(a);
+
+    int ans =0;
+    if(l%2==0)
+    {
+      ans = (a[l/2] +a[l/2 -1])/2;
+    }
+    else{
+      ans = a[l/2];
+    }
+
+    return ans.ToString();
+  }
+
+
+  static void Main() {  
+    // keep this function call here
+    Console.WriteLine(ArrayChallenge(Console.ReadLine()));
+  } 
+
+}

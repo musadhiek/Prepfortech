@@ -1,0 +1,13 @@
+void sort()
+{
+    min h;
+    
+    
+    for(int x:arr) h.push(x);
+    
+    while(!h.empty())
+    {
+        print h.top();
+        h.pop();
+    }
+}

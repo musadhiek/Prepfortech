@@ -1,0 +1,30 @@
+class Solution {
+public:
+    map<int,int> mp;
+    int mincost(vector<int>& cost, int curr)
+    {
+        if(curr==cost.size())
+            return 0;
+        
+        if(curr>cost.size()) return -1;
+        
+        if(mp.find(curr)!=mp.end())
+        {
+            return mp[curr];
+        }
+        int one=cost[curr]+mincost(cost,curr+1);
+         int two=cost[curr]+mincost(cost,curr+2);
+        int currkey=curr;
+        
+        mp[currkey]=min(one,two);
+        
+        return mp[currkey];
+        
+    }
+    int minCostClimbingStairs(vector<int>& cost) {
+        int a=mincost(cost,0);
+         int b=mincost(cost,1);
+        
+        return min(a,b);
+    }
+};

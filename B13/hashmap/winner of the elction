@@ -1,0 +1,64 @@
+def findwinner(votes):
+    mp=dict()
+    for st in votes:
+       mp[st]=mp.get(st,0)+1
+       mp[st]+=1
+    
+    maxvalue=0
+    win=""
+    
+    for i in mp:
+        key=i
+        value=mp[i]
+        
+        if value>maxval:
+            maxvalue=value
+            win=key
+            
+        elif value==maxvalue and win>key:
+            win=key
+            
+        print (win)
+        
+     [john,john,jack,jamie]   
+     
+     [john--2]  
+     [jack--1]
+     [jamie--1]
+        
+         key=john val=2  winn=john maxval--2
+        
+        
+        
+        
+        
+        
+        
+        
+        map<int,int> mp;
+        for(int i=0;i<n;i++)
+        {
+            mp[ar[i]]++;
+        }
+        int maxvalue=0;
+        string win="";
+        for(string entry:mp)
+        {
+            string key=entry.first;
+            int val=entry.second;
+            if(val>maxvalue )
+            {
+                maxvalue=value;
+                win=key;
+            }
+        else if(val==maxvalue && win>key)
+        win=key;
+        
+        print winner
+        
+        
+        
+        
+            
+            
+            

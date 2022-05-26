@@ -1,0 +1,17 @@
+int getbytwice(int arr[],int n)
+{
+    for(int i=0;i<n;i++)
+    m[arr[i]]++;
+    
+    int ans=0;
+    
+    for( int i=0;i<n;i++)
+    {
+        ans+=m[sum-a[i]];
+        iftarget-a[i]==arr[i])
+            ans+=mp[arr[i]-1];
+            else ans+=freq[k-ar[i]]
+        
+    }
+}
+

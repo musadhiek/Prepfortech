@@ -1,0 +1,51 @@
+set<int> s;
+
+for(int i=0;i<n;i++)
+{
+    if(a[i]=="END") s.clear();
+    else{
+        if(s.find(a[i])!=s.end()) s.erase(ar[i]);
+        
+        else s.insert(a[i]);
+    }
+    
+}
+
+return s.size();
+
+//python
+dict={}
+for i in a:
+if i=="END"
+ dict={}
+ elif :
+ if i in dict:
+ dict.pop(i)
+ else
+ dict[i]=i
+ 
+ set<int> s;
+
+for(int i=0;i<n;i++)
+{
+    if(a[i]=="END") s.clear();
+    else{
+        if(s.find(a[i])!=s.end()) s.erase(ar[i]);
+        
+        else s.insert(a[i]);
+    }
+    
+}
+
+return s.size();
+
+//python
+dict=set()
+for i in a:
+if i=="END"
+ dict={}
+ elif :
+ if i in dict:
+ dict.pop(i)
+ else
+ dict.add(i)

@@ -1,0 +1,7 @@
+class Solution:
+    def solve(self, nums):
+        nums=set(nums)
+        first=1
+        while first in nums:
+            first=first+1
+        return first

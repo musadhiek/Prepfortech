@@ -1,0 +1,28 @@
+vector<int> solve(vector<int>& nums, int k) {
+    int n=nums.size();
+    vector<int> heaps,res;
+
+    for(int i=0;i<n;i++)
+    {
+        int sum=0;
+        for(int j=i;j<n;j++)
+        {
+            sum+=nums[j];
+            heaps.push_back(sum);
+        }
+    }
+
+    make_heap(heaps.begin(),heaps.end());
+
+    while(k--)
+    {
+        res.push_back(heaps.front());
+        pop_heap(heaps.begin(),heaps.end());
+        heaps.pop_back();
+
+    }
+    sort(res.begin(),res.end());
+    return res;
+}
+
+https://binarysearch.com/problems/K-Maximum-Sums

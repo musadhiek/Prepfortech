@@ -1,0 +1,11 @@
+int x=1;
+sort(nums.begin(),numns.end());
+for(int i=0;i<n;i++)
+{
+    if(nums[i]>x) return x;
+
+    else if(nums[i]==x). x++;
+
+return x;
+}
+https://binarysearch.com/problems/First-Missing-Positive

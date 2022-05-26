@@ -1,0 +1,16 @@
+void sort()
+{
+    min h;
+    
+    //insert in heap [frequency,element]
+    
+    while(!h.empty())
+    {
+       int freq=h.top().first;
+       int elem=h.top().second;
+       
+       for(int i=1;i<=freq;i++)
+       cout<<elem;
+       h.pop();
+    }
+}
